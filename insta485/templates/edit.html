@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>insta485</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="left-section">
+            <a href="{{url_for('show_index')}}"><img src="{{ url_for('static', filename='images/Logo.jpg') }}"
+                    alt="Logo" /></a>
+            <span class="divider">|</span>
+            <span class="brand-name">Insta485</span>
+        </div>
+        <nav>
+            <a href="/explore/">explore</a>
+            <span>|</span>
+            <a href="/users/{{ logname }}/">{{ logname }}</a>
+        </nav>
+    </header>
+
+    <div class="action-container">
+        <img src="/uploads/{{ user_info[0].filename }}" alt="Profile Picture" width="50">
+        <span style="margin: 10pt; font-size: 15pt">{{ logname }}</span>
+        <form style="margin: 10pt;" action="/accounts/edit/" method="post" enctype="multipart/form-data">
+            <label for="file">Photo</label>
+            <input type="file" id="file" name="file" accept="image/*"/>
+            <label for="fullname">Name</label>
+            <input type="text" id="fullname" name="fullname" value="{{ user_info[0].fullname }}" required/>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ user_info[0].email }}" required/>
+            <input type="submit" name="update" value="submit"/>
+            <input type="hidden" name="operation" value="edit_account"/>
+        </form>
+        <div class="action-link">
+            <a href="/accounts/password/">Change password</a>
+            <br><br>
+            <a href="/accounts/delete/">Delete account</a>
+        </div>
+    </div>
+</body>
+</html>

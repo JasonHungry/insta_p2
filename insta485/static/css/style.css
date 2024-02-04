@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 这将保证所有的子元素都在同一水平线上 */
+}
+
+header .left-section {
+    display: flex;
+    align-items: center;
+}
+
+header .left-section .divider {
+    margin: 0 10px;
+    /* 分隔符的左右间隔 */
+    color: #262626;
+    font-size: 30px;
+    line-height: 0;
+}
+
+header .left-section .brand-name {
+    font-size: 24px;
+    /* 艺术字大小 */
+    font-weight: bold;
+    color: #262626;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* 平均分配子元素间隔 */
+}
+
+header nav a,
+header nav span {
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
+    padding: 0 5px;
+    /* 添加左右填充以产生间隔 */
+}
+
+header img {
+    height: 50px;
+    /* 你可以设置一个固定的高度 */
+    width: 50px;
+    /* 也可以设置一个固定的宽度 */
+}
+
+article {
+    background-color: white;
+    margin: 20px auto;
+    width: 500px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+article header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+article header img {
+    height: 30px;
+    width: auto;
+    margin-right: 5px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+.time a {
+    color: #8e8e8e;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.likes,
+.comments {
+    margin-left: 10px;
+}
+
+.comments a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #262626;
+}
+
+.profile-info {
+    width: 610px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.profile-stats div {
+    text-align: center;
+}
+
+.profile-stats div a {
+    text-decoration: none;
+    color: #262626;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    max-width: 630px;
+    margin: 20px auto;
+}
+
+.post {
+    margin-right: 10px;
+    /* Space between posts */
+    margin-bottom: 10px;
+    /* Space between rows */
+    width: 200px;
+    /* Width of each post */
+}
+
+.post img {
+    width: 100%;
+    /* Make image fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.follower-list {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.follower-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.follower-item:last-child {
+    border-bottom: none;
+}
+
+.profile-pic {
+    width: 50px;
+    /* Adjust as needed */
+    border-radius: 50%;
+    /* Circular profile images */
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.follow-status {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.action-container {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    input[type=text], input[type=password], input[type=submit], input[type=email], input[type=file]{
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+}
+
+.action-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
